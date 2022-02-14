@@ -25,7 +25,7 @@ def check_guess(guess, real_word):
 
 
 def game_loop(real_word):
-    wordle_guesses_file = open('./wordle_list_answers.txt')
+    wordle_guesses_file = open('wordle_list_answers.txt')
     valid_guesses = set(wordle_guesses_file.read().split('\n'))
     wordle_guesses_file.close()
 
@@ -51,7 +51,7 @@ def game_loop(real_word):
 
 def main():
     random.seed(str(datetime.date.today()))
-    wordle_words_file = open('./wordle_list_answers.txt')
+    wordle_words_file = open('wordle_list_answers.txt')
     word_list = wordle_words_file.read().split('\n')
     todays_word = random.choice(word_list)
     wordle_words_file.close()
